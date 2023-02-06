@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { First } from './pages/First-page';
 import { Second } from './pages/Second-page';
-import { Third } from './pages/Third-page';
+import Third from './pages/ThirdPage/Third-page';
 import { Navbar } from './components/Navbar';
 
 function App() {
