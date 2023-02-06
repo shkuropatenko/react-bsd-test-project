@@ -1,13 +1,23 @@
 import { useState, useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import Glyphicon from '@strongdm/glyphicon';
 
 export const Second = () => {
-  const [data] = useState([25, 50, 35, 15, 94, 10]);
-  const svgRef = useRef();
+  const n = 10;
+  const numFibonacci = [0, 10];
 
+  for (let i = 2; i < n; i++) {
+    numFibonacci[i] = numFibonacci[i - 1] + numFibonacci[i - 2];
+  }
+
+  const [data] = useState(numFibonacci.slice(0, n));
+  const svgRef = useRef();
+  const [showLine, setShowLine] = useState(false);
+  const toggleState = () => setShowLine(!showLine);
+  console.log(numFibonacci);
   useEffect(() => {
     const w = 400;
-    const h = 100;
+    const h = 340;
     const svg = d3.select(svgRef.current)
       .attr('width', w)
       .attr('height', h)
@@ -37,18 +47,23 @@ export const Second = () => {
     svg.append('g')
       .call(yAxis);
 
-    svg.selectAll('.line')
-      .data([data])
-      .join('path')
-      .attr('d', d => generateScaleLine(d))
-      .attr('fill', 'none')
-      .attr('stroke', 'black');
+    if (showLine) {
+      svg.selectAll('.line')
+        .data([data])
+        .join('path')
+        .attr('d', d => generateScaleLine(d))
+        .attr('fill', 'none')
+        .attr('stroke', 'black');
+    }
 
-  }, [data]);
-
+  }, [showLine]);
+  // onClick = { togglePosition }
   return (
     <div>
-      <svg ref={svgRef}></svg>
+      <div>
+        <svg ref={svgRef}></svg>
+      </div>
+      <button onClick={toggleState}>Draw <Glyphicon glyph='star' /></button>
     </div>
   )
 }

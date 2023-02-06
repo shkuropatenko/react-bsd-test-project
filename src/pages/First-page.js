@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Glyphicon from '@strongdm/glyphicon'
+import Glyphicon from '@strongdm/glyphicon';
 
 export const First = () => {
   const [isShown, setIsShown] = useState();
@@ -10,7 +10,7 @@ export const First = () => {
   return (
     <>
       {!isShown ?
-        <button onClick={toggleState}>Click <Glyphicon glyph='star' /></button> : <h1>Hello World!</h1>
+        <button onClick={toggleState}><b>Click</b> <Glyphicon glyph='star' /></button> : <h1>Hello World!</h1>
       }
     </>
   )
