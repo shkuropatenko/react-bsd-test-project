@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 export const Graphic = ({ showLine }) => {
   const n = 10;
   const numFibonacci = [0, 10];
+
   for (let i = 2; i < n; i++) {
     numFibonacci[i] = numFibonacci[i - 1] + numFibonacci[i - 2];
   }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Glyphicon from '@strongdm/glyphicon';
-import { Graphic } from '../components/graphic';
+import { Graphic } from '../components/Graphic';
 
 export const Second = () => {
   const [showLine, setShowLine] = useState(false);
