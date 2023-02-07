@@ -1,0 +1,31 @@
+To run the project you need to install the modules, using commands:
+### `npm install`
+
+To start the project in the browser you need to use the command;
+### `npm start`
+
+Launches the test runner in the interactive watch mode.
+### `npm test`
+
+Builds the app for production to the `build` folder.
+### `npm run build`
+
+1) Created react app
+
+2) Added route-react and created pages.
+
+3) Added navigation menu in header
+
+4) Added buttons
+
+5) Added glyphicon module
+
+6) Created button function onClick, toggle button and text. Switch button to text "Hello World";
+
+7) Added npm d3, and created chart function fot line graphic
+
+8) Created Fibonacci Array and invluded this array to line D3 graphic
+
+9) Included calculator from Github
+
+10) Added styles and separeted components
