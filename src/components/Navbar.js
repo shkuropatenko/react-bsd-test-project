@@ -2,11 +2,17 @@ import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
-    <nav>
+    <nav className='nav'>
       <ul>
-        <NavLink to='/'>First</NavLink >
-        <NavLink to='/second'>Second</NavLink >
-        <NavLink to='/third'>Third</NavLink >
+        <li>
+          <NavLink to='/'>First</NavLink>
+        </li>
+        <li>
+          <NavLink to='/second'>Second</NavLink>
+        </li>
+        <li>
+          <NavLink to='/third'>Third</NavLink>
+        </li>
       </ul>
     </nav>
   )

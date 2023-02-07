@@ -1,8 +1,8 @@
-import React from "react";
-import Display from "./Display";
-import ButtonPanel from "./ButtonPanel";
-import calculate from "../../logic/calculate";
-import "./App.css";
+import React from 'react';
+import Display from './ThirdPageComponent/Display';
+import ButtonPanel from './ThirdPageComponent/ButtonPanel';
+import calculate from '../logic/calculate';
+import './ThirdPageComponent/App.css';
 
 export default class Third extends React.Component {
   state = {
@@ -18,7 +18,7 @@ export default class Third extends React.Component {
   render() {
     return (
       <div className="component-app">
-        <Display value={this.state.next || this.state.total || "0"} />
+        <Display value={this.state.next || this.state.total || '0'} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
