@@ -1,3 +1,17 @@
+import { useState } from 'react';
+import Glyphicon from '@strongdm/glyphicon';
+import { Graphic } from '../components/Graphic';
+
 export const Second = () => {
-  return <div>Second Page</div>
+  const [showLine, setShowLine] = useState(false);
+  const toggleState = () => setShowLine(!showLine);
+
+  return (
+    <>
+      <div>
+        <Graphic showLine={showLine} />
+      </div>
+      <button onClick={toggleState} className='btn'>Draw <Glyphicon glyph='star' /></button>
+    </>
+  )
 }
